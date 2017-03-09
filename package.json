@@ -7,7 +7,7 @@
     "start": "node server.js",
     "start:dev": "webpack-dev-server",
     "dev": "npm test && nodemon server.js",
-    "test": "mocha test/",
+    "test": "mocha test/**/*.js",
     "build": "webpack --display-error-details --colors --progress --module-bind 'js=babel'",
     "watch": "webpack --display-error-details --colors --progress --module-bind 'js=babel' --watch"
   },
