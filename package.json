@@ -7,7 +7,8 @@
     "start": "node server.js",
     "start:dev": "webpack-dev-server",
     "dev": "npm test && nodemon server.js",
-    "test": "mocha test/**/*.js",
+    "test": "mocha --require babel-polyfill --compilers js:babel-register test/**/*.js",
+    "test:watch": "mocha --watch test/**/*.js",
     "build": "webpack --display-error-details --colors --progress --module-bind 'js=babel'",
     "watch": "webpack --display-error-details --colors --progress --module-bind 'js=babel' --watch"
   },
@@ -47,6 +48,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.23.0",
     "css-loader": "^0.26.2",
+    "mocha": "^2.5.3",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
