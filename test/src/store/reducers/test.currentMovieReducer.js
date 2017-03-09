@@ -1,5 +1,7 @@
 import { expect } from 'chai';
 
+import currentMovieReducer from '../../../../src/store/reducers/reducer.currentMovie';
+
 describe('current movie reducer', () => {
 
   it('should return the current state when given an unknown or undefined action', () => {
