@@ -7,6 +7,13 @@ import {
 
 describe('current movie reducer', () => {
 
+  it('should return the default state when passed an empty object as state', () => {
+      const expectedState = {
+        currentMovie: ''
+      };
+      expect(currentMovieReducer({}, { type: SET_CURRENT_MOVIE })).to.deep.equal(expectedState);
+  });
+
   it('should return the current state when given an unknown action', () => {
     const currentState = {
       currentMovie: 'Raiders of the Lost Ark'
