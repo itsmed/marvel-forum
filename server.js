@@ -5,7 +5,7 @@ const path = require('path');
 
 const port = 8000;
 const publicPath = path.resolve(__dirname, 'public');
-const staticPath = path.resolve(__dirname, 'public', 'src');
+const staticPath = path.resolve(__dirname, 'src');
 
 const app = express();
 
