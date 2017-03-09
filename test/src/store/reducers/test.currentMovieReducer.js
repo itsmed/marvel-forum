@@ -7,11 +7,10 @@ import {
 
 describe('current movie reducer', () => {
 
-  it('should return the current state when given an unknown or undefined action', () => {
+  it('should return the current state when given an unknown action', () => {
     const currentState = {
       currentMovie: 'Raiders of the Lost Ark'
     };
-    expect(currentMovieReducer(currentState)).to.deep.equal(currentState);
     expect(currentMovieReducer(currentState, { type: 'RANDOM_ACTION'})).to.deep.equal(currentState);
   });
 
